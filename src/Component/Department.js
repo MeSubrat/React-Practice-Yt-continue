@@ -1,3 +1,4 @@
+import React from "react";
 const Department=()=>{
     return <div>
         <h2>This is Department component!!</h2>
