@@ -1,9 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {BrowserRouter , Link , Route , Routes} from 'react-router-dom'
-import  Employee from './Component/Employee';
-import Project from './Component/Project';
-import Department from './Component/Department';
+import Employee from './Component/Employee'
+import Project from './Component/Project'
+import Department from './Component/Department'
+import NotFound from './notfound';
 
 // function App(){
 //   return <div>
@@ -36,10 +37,9 @@ function App(){
       <Route path='/Employee' element={<Employee/>}></Route>
       <Route path='/Project' element={<Project/>}></Route>
       <Route path='/Department' element={<Department/>}></Route>
+      <Route path='*' element={<NotFound/>}></Route> {/*Here we have used a notFound component for invalid urls*/}
     </Routes> {/*Instead of switches we are using 'routes' */}
   </div>
 }
 
 ReactDOM.render(<BrowserRouter><App></App></BrowserRouter>,document.getElementById('root'));
-
-
